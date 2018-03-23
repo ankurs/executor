@@ -1,3 +1,4 @@
+// Package executor provides an executor service that can limit concurrency and short circuit on failures
 package executor
 
 import (
@@ -86,7 +87,7 @@ func (e *exe) Wait() error {
 				return err
 			}
 		case <-e.done:
-			// rare corner case of errc trigring after done
+			// rare corner case of errc trigging after done
 			// when only 1 task was added
 			select {
 			case err := <-e.errc:
@@ -98,7 +99,7 @@ func (e *exe) Wait() error {
 	}
 }
 
-//NewExecutor builds and retuns a executor
+//NewExecutor builds and returns an executor
 func NewExecutor(options ...Option) Executor {
 	c := config{
 		concurrency: 5,

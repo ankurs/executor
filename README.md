@@ -1,12 +1,17 @@
 # executor
 `import "github.com/ankurs/executor"`
 
+
+[![Build Status](https://travis-ci.org/ankurs/executor.svg?branch=master)](https://travis-ci.org/ankurs/executor) [![Go Report Card](https://goreportcard.com/badge/github.com/ankurs/executor)](https://goreportcard.com/report/github.com/ankurs/executor)
+
 * [Overview](#pkg-overview)
 * [Imported Packages](#pkg-imports)
 * [Index](#pkg-index)
 
 ## <a name="pkg-overview">Overview</a>
 go:generate godoc2ghmd -ex -file=README.md github.com/ankurs/executor
+
+Package executor provides an executor service that can limit concurrency and short circuit on failures
 
 ## <a name="pkg-imports">Imported Packages</a>
 
@@ -21,7 +26,7 @@ No packages beyond the Go standard library are imported.
 * [type Task](#Task)
 
 #### <a name="pkg-files">Package files</a>
-[executor.go](./executor.go) [types.go](./types.go) 
+[documentation.go](./documentation.go) [executor.go](./executor.go) [types.go](./types.go) 
 
 ## <a name="Executor">type</a> [Executor](./types.go#L7-L12)
 ``` go
@@ -38,7 +43,7 @@ Executor is the interface for a basic executor pipeline
 ``` go
 func NewExecutor(options ...Option) Executor
 ```
-NewExecutor builds and retuns a executor
+NewExecutor builds and returns an executor
 
 ## <a name="Option">type</a> [Option](./types.go#L15)
 ``` go
