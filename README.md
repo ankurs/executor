@@ -9,8 +9,6 @@
 * [Index](#pkg-index)
 
 ## <a name="pkg-overview">Overview</a>
-go:generate godoc2ghmd -ex -file=README.md github.com/ankurs/executor
-
 Package executor provides an executor service that can limit concurrency and short circuit on failures
 
 ## <a name="pkg-imports">Imported Packages</a>
